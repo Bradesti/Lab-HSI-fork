@@ -6,11 +6,24 @@
 
 int vector_max(int *v, int len)
 {
-	int max;
-	unsigned int i;
+	int max = v[0];
+	unsigned int i = 0;
 
-	/**
-	 * TODO: Implement finding the maximum value in the vector
-	 */
-	return -1;
+	goto C0;
+L0:
+	goto C1;
+L1:
+	max = v[i];
+	goto C0;
+C1:
+	if (v[i] > max) {
+		goto L1;
+	}
+	i++;
+C0:
+	if (i < len) {
+		goto L0;
+	}
+
+	return max;
 }
