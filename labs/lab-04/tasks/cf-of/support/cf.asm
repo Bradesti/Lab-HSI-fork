@@ -1,4 +1,4 @@
-; SPDX-License-Identifier: BSD-3-Clause
+ ; SPDX-License-Identifier: BSD-3-Clause
 
 %include "printf64.asm"
 
@@ -13,7 +13,7 @@ main:
     mov al, 0xFF
     PRINTF64 `the Carry Flag is not active\n\x0`
     test al, al
-    ;TODO: activate the Carry Flag
+    add al, 100000
 
     jc carry_flag
     jmp end

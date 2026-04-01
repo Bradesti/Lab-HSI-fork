@@ -13,7 +13,7 @@ main:
     mov al, 0x7F
     PRINTF64 `the Overflow Flag is not active\n\x0`
     test al, al
-    ;TODO: activate the Overflow Flag
+    add al, 1000000
 
     jo overflow_flag
     jmp end
